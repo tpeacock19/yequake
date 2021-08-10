@@ -237,7 +237,7 @@ See Info node `(elisp)Frame Parameters'."
     (let ((split-width-threshold 0)
           (split-height-threshold 0))
       ;; Switch to first buffer, pop to the rest.
-      (switch-to-buffer (act (car buffer-fns)))
+      (display-buffer (act (car buffer-fns)))
       (dolist (fn (cdr buffer-fns))
         (when-let* ((ret (act fn)))
           (cl-typecase ret
